@@ -17,84 +17,117 @@ const ProfileLayout = () => {
             <ul className="sidebar-ul">
               <li
                 className={`side-list ${
-                  activeLink == "/profile/settings" ? 'active-link' : ""
+                  activeLink == "/profile/settings" ? "active-link" : ""
                 }`}
-                onClick={() => handleLinkClick("/profile/settings")}
               >
-                <Link to={"settings"} className="side-link">
+                <Link
+                  to={"settings"}
+                  className="side-link"
+                  onClick={() => handleLinkClick("/profile/settings")}
+                >
                   Редактировать Профиль
+                  <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
               <li
                 className={`side-list ${
-                  activeLink == "/profile/news" ? 'active-link' : ""
+                  activeLink == "/profile/news" ? "active-link" : ""
                 }`}
-                onClick={() => handleLinkClick("/profile/news")}
               >
-                <Link to={"news"} className="side-link">
+                <Link
+                  to={"news"}
+                  className="side-link"
+                  onClick={() => handleLinkClick("/profile/news")}
+                >
                   Новости
+                  <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
               <li
                 className={`side-list ${
-                  activeLink == "/profile/payment" ? 'active-link' : ""
+                  activeLink == "/profile/payment" ? "active-link" : ""
                 }`}
-                onClick={() => handleLinkClick("/profile/payment")}
               >
-                <Link to={"payment"} className="side-link">
+                <Link
+                  to={"payment"}
+                  className="side-link"
+                  onClick={() => handleLinkClick("/profile/payment")}
+                >
                   Оплата
+                  <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
               <li
                 className={`side-list ${
-                  activeLink == "/profile/language" ? 'active-link' : ""
+                  activeLink == "/profile/language" ? "active-link" : ""
                 }`}
-                onClick={() => handleLinkClick("/profile/language")}
               >
-                <Link to={"language"} className="side-link">
+                <Link
+                  to={"language"}
+                  className="side-link"
+                  onClick={() => handleLinkClick("/profile/language")}
+                >
                   Язык
+                  <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
               <li
                 className={`side-list ${
-                  activeLink == "/profile/theme" ? 'active-link' : ""
+                  activeLink == "/profile/theme" ? "active-link" : ""
                 }`}
-                onClick={() => handleLinkClick("/profile/theme")}
               >
-                <Link to={"theme"} className="side-link">
+                <Link
+                  to={"theme"}
+                  className="side-link"
+                  onClick={() => handleLinkClick("/profile/theme")}
+                >
                   Тема
+                  <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
               <li
                 className={`side-list ${
-                  activeLink == "/profile/checkmark" ? 'active-link' : ""
+                  activeLink == "/profile/checkmark" ? "active-link" : ""
                 }`}
-                onClick={() => handleLinkClick("/profile/checkmark")}
               >
-                <Link to={"checkmark"} className="side-link">
+                <Link
+                  to={"checkmark"}
+                  className="side-link"
+                  onClick={() => handleLinkClick("/profile/checkmark")}
+                >
                   Как получить галочку?
+                  <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
               <li
                 className={`side-list ${
-                  activeLink == "/profile/support" ? 'active-link' : ""
+                  activeLink == "/profile/support" ? "active-link" : ""
                 }`}
-                onClick={() => handleLinkClick("/profile/support")}
               >
-                <Link to={"support"} className="side-link">
+                <Link
+                  to={"support"}
+                  className="side-link"
+                  onClick={() => handleLinkClick("/profile/support")}
+                >
                   Написать Админу
+                  <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
               <li
                 className={`side-list ${
-                  activeLink == "/profile/contact" ? 'active-link' : ""
+                  activeLink == "/profile/contact" ? "active-link" : ""
                 }`}
-                onClick={() => handleLinkClick("/profile/contact")}
               >
-                <Link to={"contact"} className="side-link">
+                <Link
+                  to={"contact"}
+                  className="side-link"
+                  onClick={() => handleLinkClick("/profile/contact")}
+                >
                   Связаться с Redder
+                  <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
+              <button className="logout-btn">Выйти</button>
             </ul>
             <section className="outlet-profile">
               <Outlet />
