@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import Logo from '../../../public/redder-fire-logo.png'
 const Header = () => {
   return (
     <>
@@ -10,7 +11,7 @@ const Header = () => {
             <div className="site-logo">
               <img
                 className="logo-img"
-                src={"/public/redder-fire-logo.png"}
+                src={Logo}
                 alt={"logo"}
               />
               <h3 className="logo-title">ReddeR</h3>
