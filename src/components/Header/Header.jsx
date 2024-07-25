@@ -10,7 +10,7 @@ const Header = () => {
             <div className="site-logo">
               <img
                 className="logo-img"
-                src={"../../../public/redder-fire-logo.png"}
+                src={"/public/redder-fire-logo.png"}
                 alt={"logo"}
               />
               <h3 className="logo-title">ReddeR</h3>
