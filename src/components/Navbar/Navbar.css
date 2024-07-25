@@ -1,0 +1,27 @@
+.container-main {
+  max-width: 1440px;
+  padding:0 290px ;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inner-nav{
+  border-bottom: 1px solid #36373C;
+  padding-bottom: 30px;
+}
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.active{
+  color: orange;
+}
+.navbar{
+  margin-top: 48px;
+}

@@ -1,0 +1,11 @@
+.dark-mode{
+  background-color: #191919;
+  color: #FFFFFF;
+}
+body{
+  background-color: #191919 !important;
+  color: #FFFFFF !important;
+}
+h1,h2,h3,h6,p,li,a{
+  color: #fff;
+}
