@@ -4,11 +4,15 @@ import "./Navbar.css";
 import bus from '../../../public/bus.svg'
 import cont from '../../../public/container.svg'
 import deliv from '../../../public/expres.svg'
+import { useTheme } from "../../context/theme-context";
 
 const Navbar = () => {
+
+  const {theme} = useTheme();
+
   return (
     <>
-      <section className="navbar">
+      <section className={`navbar ${theme}`}>
         <div className="container-main">
           <div className="inner-nav">
             <ul className="li-wrapper">

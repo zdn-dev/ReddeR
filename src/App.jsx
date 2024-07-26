@@ -11,10 +11,12 @@ import Theme from "./pages/profile/Theme.jsx";
 import Checkmark from "./pages/profile/Checkmark.jsx";
 import Suppport from "./pages/profile/Suppport.jsx";
 import Contact from "./pages/profile/Contact.jsx";
+import { ThemeProvider } from "./context/theme-context.jsx";
 
 function App() {
   return (
     <>
+    <ThemeProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -35,6 +37,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+    </ThemeProvider>
     </>
   );
 }

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "../assets/style.css";
+import { useTheme } from "../context/theme-context.jsx";
 
 const ProfileLayout = () => {
   const [activeLink, setActiveLink] = useState("/profile/settings");
@@ -9,11 +10,14 @@ const ProfileLayout = () => {
     setActiveLink(link);
   };
 
+  const {theme , toggleTheme} = useTheme();
+  console.log(theme);
+
   return (
     <>
       <div className="profile">
         <div className="container">
-          <div className="profile-inner">
+          <div className={`profile-inner ${theme}`}>
             <ul className="sidebar-ul">
               <li
                 className={`side-list ${
@@ -84,6 +88,20 @@ const ProfileLayout = () => {
                   Тема
                   <i className="bi bi-chevron-right"></i>
                 </Link>
+                <div className="sidebtns">
+                  <i className="bi bi-brightness-high sun"></i>
+                  <div className="checkbox-wrapper-6">
+                    <input
+                      className="tgl tgl-light"
+                      id="cb1-6"
+                      type="checkbox"
+                      onChange={toggleTheme}
+                      checked={theme === "dark"}
+                    />
+                    <label className="tgl-btn" htmlFor="cb1-6" />
+                  </div>
+                  <i className="bi bi-moon moon"></i>
+                </div>
               </li>
               <li
                 className={`side-list ${

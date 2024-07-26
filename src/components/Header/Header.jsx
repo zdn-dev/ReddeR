@@ -2,10 +2,14 @@ import React from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import Logo from '../../../public/redder-fire-logo.png'
+import { useTheme } from "../../context/theme-context";
 const Header = () => {
+
+  const {theme} = useTheme();
+
   return (
     <>
-      <header className="dark-mode header">
+      <header className={`${theme} header`}>
         <div className="container"> 
           <div className="header-inner">
             <div className="site-logo">

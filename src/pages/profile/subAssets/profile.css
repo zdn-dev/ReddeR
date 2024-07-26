@@ -1,0 +1,48 @@
+.person-img {
+  width: 75px;
+  height: 75px;
+  margin: 33px 0;
+}
+
+.input-wrapper {
+  position: relative;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.input-wrapper i {
+  position: absolute;
+  font-size: 24px;
+  top: 14px;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.input-wrapper input {
+  background-color: var(--input-bg);
+  color: #fff;
+  width: 315px;
+  height: 55px;
+  border: 0;
+  border-radius: 14px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+  border: 1px solid paleturquoise;
+}
+.profile-btn {
+  color: var(--text-color);
+  text-align: center;
+  padding: 14px 0;
+  width: 315px;
+  border-radius: 14px;
+  border: 1px solid #faad52;
+  margin-top: 26px;
+  cursor: pointer;
+  background-color: transparent;
+}

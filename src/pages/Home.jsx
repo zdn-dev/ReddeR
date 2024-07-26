@@ -3,7 +3,13 @@ import React from 'react';
 const Home = () => {
   return (
     <>
-    <h1>home</h1>      
+    <div className="home-section">
+      <div className="container">
+        <div className="inner-hsection">
+          <h1 className='htitle'>Home Page</h1>
+        </div>
+      </div>
+    </div>
     </>
   );
 };
