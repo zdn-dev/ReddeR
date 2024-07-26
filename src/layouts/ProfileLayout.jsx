@@ -11,7 +11,6 @@ const ProfileLayout = () => {
   };
 
   const {theme , toggleTheme} = useTheme();
-  console.log(theme);
 
   return (
     <>
