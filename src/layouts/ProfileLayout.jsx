@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useTransition } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "../assets/style.css";
 import { useTheme } from "../context/theme-context.jsx";
+import { useTranslation } from "react-i18next";
 
 const ProfileLayout = () => {
   const [activeLink, setActiveLink] = useState("/profile/settings");
@@ -9,6 +10,8 @@ const ProfileLayout = () => {
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
+
+  const { t } = useTranslation();
 
   const {theme , toggleTheme} = useTheme();
 
@@ -28,7 +31,7 @@ const ProfileLayout = () => {
                   className="side-link"
                   onClick={() => handleLinkClick("/profile/settings")}
                 >
-                  Редактировать Профиль
+                  {t("edit-profile")}
                   <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
@@ -42,7 +45,7 @@ const ProfileLayout = () => {
                   className="side-link"
                   onClick={() => handleLinkClick("/profile/news")}
                 >
-                  Новости
+                  {t("news")}
                   <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
@@ -56,7 +59,7 @@ const ProfileLayout = () => {
                   className="side-link"
                   onClick={() => handleLinkClick("/profile/payment")}
                 >
-                  Оплата
+                  {t("payment")}
                   <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
@@ -70,7 +73,7 @@ const ProfileLayout = () => {
                   className="side-link"
                   onClick={() => handleLinkClick("/profile/language")}
                 >
-                  Язык
+                  {t("lang")}
                   <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
@@ -84,7 +87,7 @@ const ProfileLayout = () => {
                   className="side-link"
                   onClick={() => handleLinkClick("/profile/theme")}
                 >
-                  Тема
+                  {t("theme")}
                   <i className="bi bi-chevron-right"></i>
                 </Link>
                 <div className="sidebtns">
@@ -112,7 +115,7 @@ const ProfileLayout = () => {
                   className="side-link"
                   onClick={() => handleLinkClick("/profile/checkmark")}
                 >
-                  Как получить галочку?
+                  {t("checkmark")}
                   <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
@@ -126,7 +129,7 @@ const ProfileLayout = () => {
                   className="side-link"
                   onClick={() => handleLinkClick("/profile/support")}
                 >
-                  Написать Админу
+                  {t("support")}
                   <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
@@ -140,11 +143,11 @@ const ProfileLayout = () => {
                   className="side-link"
                   onClick={() => handleLinkClick("/profile/contact")}
                 >
-                  Связаться с Redder
+                  {t("contact")}
                   <i className="bi bi-chevron-right"></i>
                 </Link>
               </li>
-              <button className="logout-btn">Выйти</button>
+              <button className="logout-btn">{t("logout")}</button>
             </ul>
             <section className="outlet-profile">
               <Outlet />

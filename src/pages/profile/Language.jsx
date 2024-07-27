@@ -3,7 +3,7 @@ import React from 'react';
 const Language = () => {
   return (
     <div>
-      <h1>Language</h1>
+      <h1 className='title-top'>Languages</h1>
     </div>
   );
 };

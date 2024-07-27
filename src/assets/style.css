@@ -181,3 +181,9 @@
   padding-top: 20px;
   color: var(--text-color);
 }
+
+.title-top{
+  color: #fff;
+  padding-top: 28px;
+  padding-bottom: 15px;
+}

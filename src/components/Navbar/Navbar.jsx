@@ -5,10 +5,13 @@ import bus from '../../../public/bus.svg'
 import cont from '../../../public/container.svg'
 import deliv from '../../../public/expres.svg'
 import { useTheme } from "../../context/theme-context";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
 
   const {theme} = useTheme();
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -19,28 +22,28 @@ const Navbar = () => {
               <li className="nav-list">
                 <NavLink to={'/'} className="nav-link">
                   <i className="bi bi-search"></i>
-                  Грузы
+                  {t("cargo")}
                 </NavLink>
               </li>
               <li className="nav-list">
                 <NavLink to={'/cars'} className="nav-link">
                   <img className="svg"  src={bus} alt={"bus"} width={30} height={24}/>
-                  Машины</NavLink>
+                  {t("cars")} </NavLink>
               </li>
               <li className="nav-list">
                 <NavLink to={'/mygruzi'} className="nav-link">
                 <img className="svg"  src={cont} alt={"bus"} width={23} height={24}/>
-                Мои грузы</NavLink>
+                {t("myCargo")} </NavLink>
               </li>
               <li className="nav-list">
                 <NavLink to={'/mycar'} className="nav-link">
                 <img className="svg"  src={deliv} alt={"bus"} width={34} height={24} />
-                Мои машины</NavLink>
+                {t("myCar")} </NavLink>
               </li>
               <li className="nav-list">
                 <NavLink to={'/profile'} className="nav-link">
                   <i className="bi bi-person-fill"></i>
-                  Профиль
+                  {t("profile")}
                 </NavLink>
               </li>
             </ul>

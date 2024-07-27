@@ -41,7 +41,7 @@ a {
 .language{
   cursor: pointer;
   margin-bottom: -10px;
-
+  padding: 0 10px;
 }
 .tel-icon{
   margin-right: 10px;
@@ -49,4 +49,29 @@ a {
 .icon{
   font-size: 24px;
   color: var(--link-color);
+}
+.lang-selector{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border-radius: 14px;
+  gap: 14px;
+  margin-top: 40px;
+  background-color: #727272;
+}
+.lang-btn{
+  width: 315px;
+  height: 30px;
+  background-color: #fff;
+  outline: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.selected{
+  border: 1px solid #ffa740;
+  border-radius: 8px;
+  opacity: 1;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import person from "../../../public/person.png";
 import "./subAssets/profile.css";
+import { useTranslation } from "react-i18next";
 
 const Settings = () => {
   const [fullName, setFullName] = useState("Aziz Trugunov");
@@ -16,6 +17,7 @@ const Settings = () => {
   const handleChangeMail = (event) => {
     setEmail(event.target.value);
   };
+  const {t} = useTranslation();
 
   return (
     <>
@@ -50,7 +52,7 @@ const Settings = () => {
                 value={email}
               />
             </div>
-            <button className="profile-btn">Изменить</button>
+            <button className="profile-btn">{t("change")}</button>
           </form>
         </div>
       </section>
