@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${theme} header`}>
+      <header className={`header`}>
         <div className="container">
           <div className="header-inner">
             <div className="site-logo">

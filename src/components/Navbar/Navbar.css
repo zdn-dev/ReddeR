@@ -1,22 +1,71 @@
-
-.inner-nav{
-  border-bottom: 1px solid #36373C;
+.inner-nav {
+  border-bottom: 1px solid #36373c;
   padding-bottom: 30px;
 }
-ul{
+ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav-link{
+.nav-link {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.active{
+.active {
   color: orange;
 }
-.navbar{
+.navbar {
   padding-top: 48px;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #36373c;
+    padding-top: 10px;
+    margin: 0;
+    .container-main {
+      width: 100%;
+      margin: 0;
+      padding: 0 10px;
+    }
+  }
+  .inner-nav {
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav-link {
+    i {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .li-wrapper li:nth-child(3) .nav-link h6,.li-wrapper li:nth-child(4) .nav-link h6, .li-wrapper li:nth-child(2) .nav-link h6  {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis "..";
+    padding: 0 4px;
+  }
+}
+
+@media screen and (max-width: 350px){
+  .li-wrapper li:nth-child(3) .nav-link h6,.li-wrapper li:nth-child(4) .nav-link h6, .li-wrapper li:nth-child(2) .nav-link h6  {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis "..";
+  }
 }

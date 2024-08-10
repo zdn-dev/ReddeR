@@ -15,35 +15,35 @@ const Navbar = () => {
 
   return (
     <>
-      <section className={`navbar ${theme}`}>
+      <section className={`navbar`}>
         <div className="container-main">
           <div className="inner-nav">
             <ul className="li-wrapper">
               <li className="nav-list">
                 <NavLink to={'/'} className="nav-link">
                   <i className="bi bi-search"></i>
-                  {t("cargo")}
+                  <h6>{t("cargo")}</h6>
                 </NavLink>
               </li>
               <li className="nav-list">
                 <NavLink to={'/cars'} className="nav-link">
-                  <img className="svg"  src={bus} alt={"bus"} width={30} height={24}/>
-                  {t("cars")} </NavLink>
+                <i class="bi bi-truck-front-fill"></i>
+                  <h6>{t("cars")}</h6> </NavLink>
               </li>
               <li className="nav-list">
                 <NavLink to={'/mygruzi'} className="nav-link">
-                <img className="svg"  src={cont} alt={"bus"} width={23} height={24}/>
-                {t("myCargo")} </NavLink>
+                <i class="bi bi-basket"></i>
+                <h6>{t("myCargo")}</h6> </NavLink>
               </li>
               <li className="nav-list">
                 <NavLink to={'/mycar'} className="nav-link">
-                <img className="svg"  src={deliv} alt={"bus"} width={34} height={24} />
-                {t("myCar")} </NavLink>
+                <i class="bi bi-truck"></i>
+                <h6>{t("myCar")}</h6> </NavLink>
               </li>
               <li className="nav-list">
                 <NavLink to={'/profile'} className="nav-link">
                   <i className="bi bi-person-fill"></i>
-                  {t("profile")}
+                  <h6>{t("profile")}</h6>
                 </NavLink>
               </li>
             </ul>
