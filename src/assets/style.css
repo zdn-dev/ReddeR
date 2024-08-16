@@ -51,26 +51,6 @@
     color: var(--link-color-active);
   }
 }
-.side-list:first-child::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  top: 9px;
-  right: 0px;
-  width: 10px;
-  height: 10px;
-  background: url("../../public/Group.png") no-repeat;
-}
-.side-list:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  top: 9px;
-  right: 0px;
-  width: 10px;
-  height: 10px;
-  background: url("../../public/green1.png") no-repeat;
-}
 .logout-btn {
   font-family: Montserrat;
   font-size: 15px;
@@ -254,5 +234,70 @@
   }
   .inner-hsection h3{
     display: none;
+  }
+}
+@media screen and (max-width: 1300px){
+  .container{
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+  }
+}
+@media screen and (max-width: 1100px){
+  .sidebar-ul{
+    display: block;
+    width: 100%;
+  }
+  .profile-inner{
+    background-color: var(--bg-color);
+  }
+  .outlet-profile{
+    width: 100%;
+  }
+  .mb-none{
+    display: none !important;
+  }
+  .mb-block{
+    display: block !important;
+  }
+}
+@media screen and (min-width: 1100px){
+  .back-btn{
+    display: none;
+  }
+  .min-none{
+    display: none;
+  }
+}
+.back-btn{
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  color: var(--text-color);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.Profile-title{
+  color: var(--text-color);
+  padding: 0 20px;
+  font-style: 22px;
+}
+.cap-wrapper{
+  display: flex;
+  justify-content: space-between;
+  i{
+    color: #FF4B26;
+    font-size: x-large;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+}
+.user-info{
+  text-align: center;
+  color: var(--text-color);
+  img{
+    padding-top: 30px;
   }
 }

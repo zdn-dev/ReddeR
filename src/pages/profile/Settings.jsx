@@ -21,7 +21,7 @@ const Settings = () => {
 
   return (
     <>
-      <section>
+      <section className="settings">
         <div className="inner-settings">
           <img className="person-img" src={person} alt="image" />
           <form action="#" className="profile-edit">
